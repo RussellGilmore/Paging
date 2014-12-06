@@ -17,12 +17,13 @@ int main()
 	state = '1';
 	printf("Welcome\n");
 	while(state != 0) {
+		input = 0;
 		printf("Please Input Your Address \n");
-	    printf("Input must be in range from 1 to 20480 \n");
+	    printf("Input should range inside and include 0 to 4294967295\n");
 	    
 	    if(fgets(buffer, sizeof(buffer), stdin) != NULL){
 			input = atol(buffer);
-			printf("Number is = %lu\n", input);
+			printf("The Number entered = %lu\n", input);
 		}
 		printf("Page Number = %lu\n", (input / PAGESIZE));
 		printf("Offset = %lu\n", (input % PAGESIZE));
